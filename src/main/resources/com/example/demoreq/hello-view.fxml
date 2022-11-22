@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demoreq.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <MenuBar>
+     <menus>
+       <Menu mnemonicParsing="false" text="File">
+         <items>
+           <MenuItem fx:id="fileChooser" mnemonicParsing="false" text="Select Directory" />
+         </items>
+       </Menu>
+       <Menu mnemonicParsing="false" text="Options">
+         <items>
+           <MenuItem onAction="#onSettingsMenuClic" mnemonicParsing="false" text="Settings" />
+               <MenuItem onAction="#onSearchClic" mnemonicParsing="false" text="Search" />
+               <MenuItem mnemonicParsing="false" text="Export to HTML" />
+               <MenuItem mnemonicParsing="false" text="Check external links" />
+               <MenuItem mnemonicParsing="false" text="Check BiseLine" />
+         </items>
+       </Menu>
+       <Menu mnemonicParsing="false" text="Git">
+         <items>
+           <MenuItem mnemonicParsing="false" text="Pull" />
+               <MenuItem onAction="#onCloneMenuClic" mnemonicParsing="false" text="Clone" />
+               <MenuItem mnemonicParsing="false" text="Select Commit" />
+               <MenuItem mnemonicParsing="false" text="Viewer Diff" />
+         </items>
+       </Menu>
+         <Menu mnemonicParsing="false" text="About">
+           <items>
+             <MenuItem mnemonicParsing="false" text="Action 1" />
+           </items>
+         </Menu>
+     </menus>
+   </MenuBar>
+
+    <Label fx:id="welcomeText" />
+    <Button onAction="#onHelloButtonClick" text="Hello!" />
+</VBox>
