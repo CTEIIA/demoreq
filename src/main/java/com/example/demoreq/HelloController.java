@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.scene.layout.StackPane;
@@ -34,6 +35,15 @@ public class HelloController {
     @FXML
     protected void onSearchClic(){
         SearchFormController.newWindow("Search");
+    }
+
+    @FXML
+    protected void onFileChooserMenuClic(){
+        DirectoryChooser directoryChooser = new DirectoryChooser();
+        directoryChooser.setTitle("Choose Folder");
+        File defultDirectory = new File("c:/");
+        directoryChooser.setInitialDirectory(defultDirectory);
+        File selectedDirectory = directoryChooser.showDialog(new Stage());
     }
 
 }

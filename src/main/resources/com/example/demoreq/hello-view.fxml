@@ -12,7 +12,7 @@
      <menus>
        <Menu mnemonicParsing="false" text="File">
          <items>
-           <MenuItem fx:id="fileChooser" mnemonicParsing="false" text="Select Directory" />
+           <MenuItem fx:id="fileChooser" onAction="#onFileChooserMenuClic" mnemonicParsing="false" text="Select Directory" />
          </items>
        </Menu>
        <Menu mnemonicParsing="false" text="Options">
