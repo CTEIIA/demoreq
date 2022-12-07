@@ -15,7 +15,7 @@ public class GitCloneFx {
         window.initModality(Modality.APPLICATION_MODAL);
         Scene scene = null;
         try {
-            scene = new Scene(fxmlLoader.load(), 320, 240);
+            scene = new Scene(fxmlLoader.load());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

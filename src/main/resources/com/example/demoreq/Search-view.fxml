@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox prefHeight="350.0" prefWidth="800.0">
          <children>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <FlowPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="800.0">
                <children>
-                  <Label text="Search" />
+                  <Label text="Search">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding></Label>
                   <TextField />
                </children>
-            </HBox>
+            </FlowPane>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <CheckBox mnemonicParsing="false" text="Search only whole words" />
-                  <RadioButton id="SearchInTree" mnemonicParsing="false" text="Search in Tree" toggleGroup="$SearchChange">
+                  <CheckBox mnemonicParsing="false" text="Search only whole words">
+                     <opaqueInsets>
+                        <Insets right="10.0" />
+                     </opaqueInsets></CheckBox>
+                  <RadioButton fx:id="SearchInTree" mnemonicParsing="false" text="Search in Tree" toggleGroup="$SearchChange">
                      <toggleGroup>
                         <ToggleGroup fx:id="SearchChange" />
-                     </toggleGroup></RadioButton>
+                     </toggleGroup>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></RadioButton>
                   <RadioButton mnemonicParsing="false" text="Search In Select Document" toggleGroup="$SearchChange" />
                   <RadioButton mnemonicParsing="false" text="Search Links" toggleGroup="$SearchChange" />
                   <RadioButton mnemonicParsing="false" text="Search In All Documents" toggleGroup="$SearchChange" />
@@ -32,6 +42,9 @@
                </children>
             </HBox>
          </children>
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
       </VBox>
    </children>
 </Pane>

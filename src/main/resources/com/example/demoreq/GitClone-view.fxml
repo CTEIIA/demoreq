@@ -5,13 +5,13 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox prefHeight="100.0" prefWidth="600.0">
          <children>
             <Label text="URL:" />
             <TextField alignment="BASELINE_RIGHT" />
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox prefHeight="100.0" prefWidth="600.0">
          <children>
             <Label text="Login:" />
             <TextField />
@@ -19,13 +19,13 @@
             <PasswordField />
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox prefHeight="100.0" prefWidth="600.0">
          <children>
             <Label text="Directory:" />
             <TextField />
             <Button alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="Browse..." />
          </children></HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox prefHeight="100.0" prefWidth="600.0">
          <children>
             <Button mnemonicParsing="false" text="Clone..." />
             <Button mnemonicParsing="false" text="Close" />

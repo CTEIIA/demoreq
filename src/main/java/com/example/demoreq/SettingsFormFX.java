@@ -15,7 +15,7 @@ public class SettingsFormFX {
         window.initModality(Modality.APPLICATION_MODAL);
         Scene scene = null;
         try {
-            scene = new Scene(fxmlLoader.load(), 520, 240);
+            scene = new Scene(fxmlLoader.load());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
