@@ -7,6 +7,9 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox prefHeight="350.0" prefWidth="800.0">
+         <padding>
+            <Insets left="10.0" right="10.0" top="10"/>
+         </padding>
          <children>
             <FlowPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="800.0">
                <children>
@@ -14,15 +17,15 @@
                      <padding>
                         <Insets left="10.0" right="10.0" />
                      </padding></Label>
-                  <TextField />
+                  <TextField fx:id="searchTextField"/>
                </children>
             </FlowPane>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                <children>
-                  <CheckBox mnemonicParsing="false" text="Search only whole words">
-                     <opaqueInsets>
-                        <Insets right="10.0" />
-                     </opaqueInsets></CheckBox>
+                  <CheckBox fx:id="searchOnlyWholeWordsCheckBox" mnemonicParsing="false" text="Search only whole words">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding></CheckBox>
                   <RadioButton fx:id="SearchInTree" mnemonicParsing="false" text="Search in Tree" toggleGroup="$SearchChange">
                      <toggleGroup>
                         <ToggleGroup fx:id="SearchChange" />
@@ -30,15 +33,16 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets></RadioButton>
-                  <RadioButton mnemonicParsing="false" text="Search In Select Document" toggleGroup="$SearchChange" />
-                  <RadioButton mnemonicParsing="false" text="Search Links" toggleGroup="$SearchChange" />
-                  <RadioButton mnemonicParsing="false" text="Search In All Documents" toggleGroup="$SearchChange" />
+                  <RadioButton fx:id="searchInSelectDocumentRButton" mnemonicParsing="false" text="Search In Select Document" toggleGroup="$SearchChange" />
+                  <RadioButton fx:id="searchLinksRButton" mnemonicParsing="false" text="Search Links" toggleGroup="$SearchChange" />
+                  <RadioButton fx:id="searchInAllDocumentsRButton" mnemonicParsing="false" text="Search In All Documents" toggleGroup="$SearchChange" />
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                <children>
-                  <Button mnemonicParsing="false" text="Ok" />
-                  <Button mnemonicParsing="false" text="Cancel" />
+                  <Button fx:id="okSearchButton" mnemonicParsing="false" text="Ok" >
+                  </Button>
+                  <Button fx:id="cancelSearchButton" mnemonicParsing="false" text="Cancel" />
                </children>
             </HBox>
          </children>
